@@ -1,0 +1,57 @@
+
+public class Data {
+	
+	
+	import java.awt.Container;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+	import javax.swing.JButton;
+	import javax.swing.JFrame;
+	import javax.swing.JLabel;
+	import javax.swing.JTextField;
+	 
+	public class Veritabani extends JFrame implements ActionListener {
+	 
+	private JTextField txtAd;
+	private JTextField txtSoyad;
+	private JButton btnEkle;
+	private JLabel lblAd;
+	private JLabel lblSoyad;
+	 
+	public Veritabani(){
+	txtAd=new JTextField();
+	txtSoyad=new JTextField();
+	lblAd=new JLabel("   Ad  ");
+	lblSoyad=new JLabel("  Soyad   ");
+	btnEkle=new JButton("Ekle");
+	setSize(300,300);
+	pencereGoster();
+	}
+	 
+	public void pencereGoster(){
+	Container con=this.getContentPane();
+	con.setLayout(null);
+	txtAd.setBounds(80,10,100,25);
+	txtSoyad.setBounds(80,40,100,25);
+	lblAd.setBounds(10,10,100,25);
+	lblSoyad.setBounds(10,40,100,25);
+	btnEkle.setBounds(80,70,70,25);
+	con.add(txtAd);
+	con.add(txtSoyad);
+	con.add(btnEkle);
+	con.add(lblAd);
+	con.add(lblSoyad);
+	btnEkle.addActionListener(this);
+	}
+	 
+	public static void main(String[] args) {
+	Data v=new Data();
+	v.setVisible(true);
+	 }
+	 
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+	}
+	}
+
+}
